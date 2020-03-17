@@ -7,7 +7,7 @@ import { AutenticacionService } from '../_servicios/autenticacion.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-  @Input() valoresDeInicio: any;
+  // @Input() valoresDeInicio: any;
   @Output() cancelarRegistro = new EventEmitter();
   modelo: any = {};
 

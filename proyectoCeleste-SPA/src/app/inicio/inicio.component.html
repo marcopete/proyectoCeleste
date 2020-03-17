@@ -11,7 +11,8 @@
   <div *ngIf="modoRegistro" class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <app-registro [valoresDeInicio]="valores" (cancelarRegistro)="modoCancelarRegistro($event)"></app-registro>
+        <!-- <app-registro [valoresDeInicio]="valores" (cancelarRegistro)="modoCancelarRegistro($event)"></app-registro> -->
+        <app-registro (cancelarRegistro)="modoCancelarRegistro($event)"></app-registro>
       </div>
     </div>
   </div>
