@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace proyectoImagemaker.API.Migrations
+namespace proyectoCeleste.API.Migrations
 {
     public partial class CreaEntidadUsuario : Migration
     {
