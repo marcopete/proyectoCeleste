@@ -16,6 +16,10 @@ using Microsoft.IdentityModel.Logging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using proyectoCeleste.API.Helpers;
 
 namespace proyectoCeleste.API
 {
@@ -54,6 +58,22 @@ namespace proyectoCeleste.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler(creador => {
+                    creador.Run(async contexto => {
+                        contexto.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+                        var error = contexto.Features.Get<IExceptionHandlerFeature>();
+
+                        if (error != null)
+                        {
+                            contexto.Response.AgregarErrorDeAplicacion(error.Error.Message);
+                            await contexto.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
+                });
             }
 
             // app.UseHttpsRedirection();

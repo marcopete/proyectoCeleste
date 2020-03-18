@@ -79,7 +79,7 @@ namespace proyectoCeleste.API.Controllers
 
             return Ok(new {
                 token = manejadorToken.WriteToken(token)
-            });
+            });          
         }
     }
 }

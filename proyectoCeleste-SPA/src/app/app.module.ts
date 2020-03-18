@@ -5,9 +5,9 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { AutenticacionService } from './_servicios/autenticacion.service';
 import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ProveedorDeInterceptorDeErrores } from './_servicios/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -22,7 +22,7 @@ import { RegistroComponent } from './registro/registro.component';
       FormsModule
    ],
    providers: [
-      AutenticacionService
+      ProveedorDeInterceptorDeErrores
    ],
    bootstrap: [
       AppComponent
