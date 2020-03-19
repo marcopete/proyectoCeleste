@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace proyectoImagemaker.API.Controllers
+namespace proyectoCeleste.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

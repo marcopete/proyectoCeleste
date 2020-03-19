@@ -1,6 +1,6 @@
 using System;
 
-namespace proyectoImagemaker.API
+namespace proyectoCeleste.API
 {
     public class WeatherForecast
     {

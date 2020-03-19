@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'proyectoImagemaker-SPA'`, () => {
+  it(`should have as title 'proyectoCeleste-SPA'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('proyectoImagemaker-SPA');
+    expect(app.title).toEqual('proyectoCeleste-SPA');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('proyectoImagemaker-SPA app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('proyectoCeleste-SPA app is running!');
   });
 });

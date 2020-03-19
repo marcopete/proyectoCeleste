@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using proyectoCeleste.API.Data;
 
-namespace proyectoImagemaker.API.Migrations
+namespace proyectoCeleste.API.Migrations
 {
     [DbContext(typeof(ContextoDatos))]
     partial class ContextoDatosModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace proyectoImagemaker.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("proyectoImagemaker.API.Models.Usuario", b =>
+            modelBuilder.Entity("proyectoCeleste.API.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,7 @@ namespace proyectoImagemaker.API.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("proyectoImagemaker.API.Models.Value", b =>
+            modelBuilder.Entity("proyectoCeleste.API.Models.Value", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

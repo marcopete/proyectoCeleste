@@ -42,7 +42,7 @@ namespace proyectoCeleste.API.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("proyectoImagemaker.API.Models.Value", b =>
+            modelBuilder.Entity("proyectoCeleste.API.Models.Value", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
