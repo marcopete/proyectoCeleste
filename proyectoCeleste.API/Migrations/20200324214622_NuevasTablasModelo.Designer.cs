@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using proyectoCeleste.API.Data;
 
 namespace proyectoCeleste.API.Migrations
 {
     [DbContext(typeof(ContextoDatos))]
-    partial class ContextoDatosModelSnapshot : ModelSnapshot
+    [Migration("20200324214622_NuevasTablasModelo")]
+    partial class NuevasTablasModelo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

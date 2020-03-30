@@ -1,0 +1,20 @@
+[
+    {
+      "TipoAtencionId": "1",
+      "DescripcionAtencion": "Para que no tenga guaguas. Hubo que darle oxigeno extra",
+      "ValorEstimadoAtencion": "120000",
+      "MascotaId": 2
+    },
+    {
+        "TipoAtencionId": "3",
+        "DescripcionAtencion": "Para que ande limpia",
+        "ValorEstimadoAtencion": "20000",
+        "MascotaId": 1
+    },
+    {
+        "TipoAtencionId": "2",
+        "DescripcionAtencion": "Para que coma",
+        "ValorEstimadoAtencion": "6000",
+        "MascotaId": 2
+    }    
+]

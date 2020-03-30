@@ -1,0 +1,14 @@
+[
+    {
+      "DescripcionTipoAtencion": "Bañado",
+      "ValorRealTipoAtencion": 20000
+    },
+    {
+        "DescripcionTipoAtencion": "Royal Canin Adulto",
+        "ValorRealTipoAtencion": 6000
+    },
+    {
+        "DescripcionTipoAtencion": "Esterilizacion",
+        "ValorRealTipoAtencion": 100000
+    }    
+]

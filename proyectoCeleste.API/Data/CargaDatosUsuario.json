@@ -1,0 +1,58 @@
+[
+  {
+    "NombreUsuario": "Estella",
+    "Password": "password",
+    "Apellido": "Perez",
+    "CiudadId": 7,
+    "Direccion": "Torneo 4872",
+    "Email": "mp@mp.com",
+    "FechaCreacion": "2017-06-03",
+    "Nombre": "Arline",
+    "RegionId": 8,
+    "TelefonoPrincipal": "+56974516587",
+    "TelefonoSecundario": "+56974516587",
+    "Mascotas": [
+      {
+        "NombreMascota": "Mini",
+        "FechaNacimiento": "2017-01-25",
+        "AntecedentesPrincipales": "Floja",
+        "TipoMascotaId": 1,
+        "Fotos": [
+          {
+            "Url": "http://cosasdemarco.com",
+            "Descripcion" : "Una linda foto de la mini",
+            "FechaCarga": "2017-06-03"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NombreUsuario": "Simone",
+    "Password": "password",
+    "Apellido": "Perez",
+    "CiudadId": 9,
+    "Direccion": "Torneo 4872",
+    "Email": "mp@mp.com",
+    "FechaCreacion": "2017-01-17",
+    "Nombre": "Jeanie",
+    "RegionId": 8,
+    "TelefonoPrincipal": "+56974516587",
+    "TelefonoSecundario": "+56974516587",
+    "Mascotas": [
+      {
+        "NombreMascota": "Alfonsina",
+        "FechaNacimiento": "2017-01-25",
+        "AntecedentesPrincipales": "Chora",
+        "TipoMascotaId": 2,
+        "Fotos": [
+          {
+            "Url": "http://cosasdemarco.com",
+            "Descripcion" : "Una linda foto de la alfonsina",
+            "FechaCarga": "2017-06-03"
+          }
+        ]        
+      }
+    ]
+  }
+]

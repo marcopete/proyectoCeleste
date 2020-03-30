@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
+using proyectoCeleste.API.Models;
 
-namespace proyectoCeleste.API.Models
+namespace proyectoCeleste.API.Dtos
 {
-    public class Usuario
+    public class UsuarioParaDetallesDto
     {
         public int Id { get; set; }
         public string NombreUsuario { get; set; }
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
@@ -16,10 +15,8 @@ namespace proyectoCeleste.API.Models
         public DateTime FechaCreacion { get; set; }
         public string TelefonoPrincipal { get; set; }
         public string TelefonoSecundario { get; set; }
-        public ICollection<Mascota> Mascotas { get; set; }
-        public Region Region { get; set; }
         public int RegionId { get; set; }
-        public Ciudad Ciudad { get; set; }
         public int CiudadId { get; set; }
+        public ICollection<MascotaParaDetallesDto> Mascotas { get; set; }
     }
 }

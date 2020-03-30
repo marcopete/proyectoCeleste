@@ -20,6 +20,7 @@ using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using proyectoCeleste.API.Helpers;
+using AutoMapper;
 
 namespace proyectoCeleste.API
 {
@@ -37,9 +38,14 @@ namespace proyectoCeleste.API
         {
             IdentityModelEventSource.ShowPII = true;
             services.AddDbContext<ContextoDatos>(x => x.UseSqlServer(Configuration.GetConnectionString("ConexionPorDefecto")));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(opcion => 
+            {
+                opcion.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
             services.AddCors();
+            services.AddAutoMapper(typeof(SistemaRepositorio).Assembly);
             services.AddScoped<IRepositorioAutorizacion, RepositorioAutorizacion>();
+            services.AddScoped<ISistemaRepositorio, SistemaRepositorio>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opciones => {
                     opciones.TokenValidationParameters = new TokenValidationParameters

@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using proyectoCeleste.API;
+using proyectoCeleste.API.Data;
 
 namespace proyectoCeleste.API
 {
@@ -14,7 +13,29 @@ namespace proyectoCeleste.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+           var huesped = CreateHostBuilder(args).Build();
+           using (var alcance = huesped.Services.CreateScope())
+           {
+               var servicios = alcance.ServiceProvider;
+               try
+               {
+                   var contexto = servicios.GetRequiredService<ContextoDatos>();
+                   contexto.Database.Migrate();
+                   CargaDatosJson.CargaRegiones(contexto);
+                   CargaDatosJson.CargaCiudades(contexto);
+                   CargaDatosJson.CargaTipoMascota(contexto);
+                   CargaDatosJson.CargaTipoAtencion(contexto);
+                   CargaDatosJson.CargaAtencion(contexto);
+                   CargaDatosJson.CargaUsuarios(contexto);
+               }
+               catch (Exception ex)
+               {
+                   var logger = servicios.GetRequiredService<ILogger<Program>>();
+                   logger.LogError(ex, "Error durante la migración");
+               }
+           }
+
+           huesped.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
