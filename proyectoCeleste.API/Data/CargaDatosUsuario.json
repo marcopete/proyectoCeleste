@@ -1,13 +1,13 @@
 [
   {
-    "NombreUsuario": "Estella",
+    "NombreUsuario": "marco",
     "Password": "password",
     "Apellido": "Perez",
     "CiudadId": 7,
     "Direccion": "Torneo 4872",
     "Email": "mp@mp.com",
     "FechaCreacion": "2017-06-03",
-    "Nombre": "Arline",
+    "Nombre": "marco",
     "RegionId": 8,
     "TelefonoPrincipal": "+56974516587",
     "TelefonoSecundario": "+56974516587",
@@ -21,21 +21,80 @@
           {
             "Url": "http://cosasdemarco.com",
             "Descripcion" : "Una linda foto de la mini",
-            "FechaCarga": "2017-06-03"
-          }
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "True"
+          },
+          {
+            "Url": "http://cosasdemarco.com",
+            "Descripcion" : "Una linda foto de la mini 2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "False"
+          }          
+        ],
+        "Atenciones": [
+          {
+            "TipoAtencionId": "1",
+            "DescripcionAtencion": "Para que no tenga guaguas. Hubo que darle oxigeno extra",
+            "ValorEstimadoAtencion": "120000",
+            "MascotaId": 2,
+            "FechaAtencion": "2017-01-17"
+          },
+          {
+            "TipoAtencionId": "2",
+            "DescripcionAtencion": "Para que coma",
+            "ValorEstimadoAtencion": "6000",
+            "MascotaId": 2,
+            "FechaAtencion": "2017-01-17"
+          }          
         ]
-      }
+      },
+      {
+        "NombreMascota": "Mini2",
+        "FechaNacimiento": "2017-01-25",
+        "AntecedentesPrincipales": "Floja2",
+        "TipoMascotaId": 1,
+        "Fotos": [
+          {
+            "Url": "http://cosasdemarco2.com",
+            "Descripcion" : "Una linda foto de la mini2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "True"
+          },
+          {
+            "Url": "http://cosasdemarco2.com",
+            "Descripcion" : "Una linda foto de la mini2 2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "False"
+          }          
+        ],
+        "Atenciones": [
+          {
+            "TipoAtencionId": "1",
+            "DescripcionAtencion": "Para que no tenga guaguas. Hubo que darle oxigeno extra 2",
+            "ValorEstimadoAtencion": "120000",
+            "MascotaId": 2,
+            "FechaAtencion": "2017-01-17"
+          },
+          {
+            "TipoAtencionId": "2",
+            "DescripcionAtencion": "Para que coma 2",
+            "ValorEstimadoAtencion": "6000",
+            "MascotaId": 2,
+            "FechaAtencion": "2017-01-17"
+          }          
+        ]
+      }      
     ]
   },
   {
-    "NombreUsuario": "Simone",
+    "NombreUsuario": "daniel",
     "Password": "password",
     "Apellido": "Perez",
     "CiudadId": 9,
     "Direccion": "Torneo 4872",
     "Email": "mp@mp.com",
     "FechaCreacion": "2017-01-17",
-    "Nombre": "Jeanie",
+    "Nombre": "daniel",
     "RegionId": 8,
     "TelefonoPrincipal": "+56974516587",
     "TelefonoSecundario": "+56974516587",
@@ -49,10 +108,69 @@
           {
             "Url": "http://cosasdemarco.com",
             "Descripcion" : "Una linda foto de la alfonsina",
-            "FechaCarga": "2017-06-03"
-          }
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "True"
+          },
+          {
+            "Url": "http://cosasdemarco.com",
+            "Descripcion" : "Una linda foto de la alfonsina 2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "False"
+          }          
+        ],
+        "Atenciones": [
+          {
+            "TipoAtencionId": "3",
+            "DescripcionAtencion": "Para que ande limpia",
+            "ValorEstimadoAtencion": "20000",
+            "MascotaId": 1,
+            "FechaAtencion": "2017-01-17"            
+          },
+          {
+            "TipoAtencionId": "2",
+            "DescripcionAtencion": "Champion Cat ya que debe comer delicado",
+            "ValorEstimadoAtencion": "5000",
+            "MascotaId": 1,
+            "FechaAtencion": "2017-01-17"            
+          }          
         ]        
-      }
+      },
+      {
+        "NombreMascota": "Alfonsina2",
+        "FechaNacimiento": "2017-01-25",
+        "AntecedentesPrincipales": "Chora2",
+        "TipoMascotaId": 2,
+        "Fotos": [
+          {
+            "Url": "http://cosasdemarco2.com",
+            "Descripcion" : "Una linda foto de la alfonsina2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "True"
+          },
+          {
+            "Url": "http://cosasdemarco2.com",
+            "Descripcion" : "Una linda foto de la alfonsina2 2",
+            "FechaCarga": "2017-06-03",
+            "FotoPrincipal": "False"
+          }          
+        ],
+        "Atenciones": [
+          {
+            "TipoAtencionId": "3",
+            "DescripcionAtencion": "Para que ande limpia2",
+            "ValorEstimadoAtencion": "20000",
+            "MascotaId": 1,
+            "FechaAtencion": "2017-01-17"            
+          },
+          {
+            "TipoAtencionId": "2",
+            "DescripcionAtencion": "Champion Cat ya que debe comer delicado2",
+            "ValorEstimadoAtencion": "5000",
+            "MascotaId": 1,
+            "FechaAtencion": "2017-01-17"            
+          }          
+        ]        
+      }      
     ]
   }
 ]

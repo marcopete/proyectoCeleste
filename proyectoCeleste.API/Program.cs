@@ -25,8 +25,8 @@ namespace proyectoCeleste.API
                    CargaDatosJson.CargaCiudades(contexto);
                    CargaDatosJson.CargaTipoMascota(contexto);
                    CargaDatosJson.CargaTipoAtencion(contexto);
-                   CargaDatosJson.CargaAtencion(contexto);
                    CargaDatosJson.CargaUsuarios(contexto);
+                //    CargaDatosJson.CargaAtencion(contexto);                   
                }
                catch (Exception ex)
                {

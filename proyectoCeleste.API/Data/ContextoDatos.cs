@@ -17,5 +17,6 @@ namespace proyectoCeleste.API.Data
         public DbSet<Region> Regiones { get; set; }
         public DbSet<TipoAtencion> TipoAtenciones { get; set; }
         public DbSet<Ciudad> Ciudades { get; set; }
+        public DbSet<Genero> Generos { get; set; }
     }
 }

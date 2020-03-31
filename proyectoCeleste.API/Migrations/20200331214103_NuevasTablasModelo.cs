@@ -69,6 +69,19 @@ namespace proyectoCeleste.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Generos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NombreGenero = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Generos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Logs",
                 columns: table => new
                 {
@@ -139,7 +152,8 @@ namespace proyectoCeleste.API.Migrations
                     FechaNacimiento = table.Column<DateTime>(nullable: false),
                     AntecedentesPrincipales = table.Column<string>(nullable: true),
                     UsuarioId = table.Column<int>(nullable: false),
-                    TipoMascotaId = table.Column<int>(nullable: false)
+                    TipoMascotaId = table.Column<int>(nullable: false),
+                    GeneroId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -167,7 +181,8 @@ namespace proyectoCeleste.API.Migrations
                     TipoAtencionId = table.Column<int>(nullable: false),
                     DescripcionAtencion = table.Column<string>(nullable: true),
                     ValorEstimadoAtencion = table.Column<int>(nullable: false),
-                    MascotaId = table.Column<int>(nullable: true)
+                    MascotaId = table.Column<int>(nullable: false),
+                    FechaAtencion = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -177,7 +192,7 @@ namespace proyectoCeleste.API.Migrations
                         column: x => x.MascotaId,
                         principalTable: "Mascotas",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Atenciones_TipoAtenciones_TipoAtencionId",
                         column: x => x.TipoAtencionId,
@@ -284,6 +299,9 @@ namespace proyectoCeleste.API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Fotos");
+
+            migrationBuilder.DropTable(
+                name: "Generos");
 
             migrationBuilder.DropTable(
                 name: "Logs");

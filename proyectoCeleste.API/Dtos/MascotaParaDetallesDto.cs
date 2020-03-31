@@ -12,6 +12,7 @@ namespace proyectoCeleste.API.Dtos
         public int UsuarioId { get; set; }
         public int TipoMascotaId { get; set; }
         public string UrlFoto { get; set; }
+        public int GeneroId { get; set; }
         public ICollection<FotoParaDetallesDto> Fotos { get; set; }
         public ICollection<AtencionesParaDetallesDto> Atenciones { get; set; }
     }

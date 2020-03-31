@@ -29,7 +29,10 @@ namespace proyectoCeleste.API.Migrations
                     b.Property<string>("DescripcionAtencion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MascotaId")
+                    b.Property<DateTime>("FechaAtencion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MascotaId")
                         .HasColumnType("int");
 
                     b.Property<int>("TipoAtencionId")
@@ -91,6 +94,21 @@ namespace proyectoCeleste.API.Migrations
                     b.ToTable("Fotos");
                 });
 
+            modelBuilder.Entity("proyectoCeleste.API.Models.Genero", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NombreGenero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Generos");
+                });
+
             modelBuilder.Entity("proyectoCeleste.API.Models.Log", b =>
                 {
                     b.Property<int>("Id")
@@ -126,6 +144,9 @@ namespace proyectoCeleste.API.Migrations
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("GeneroId")
+                        .HasColumnType("int");
 
                     b.Property<string>("NombreMascota")
                         .HasColumnType("nvarchar(max)");
@@ -262,9 +283,11 @@ namespace proyectoCeleste.API.Migrations
 
             modelBuilder.Entity("proyectoCeleste.API.Models.Atencion", b =>
                 {
-                    b.HasOne("proyectoCeleste.API.Models.Mascota", null)
+                    b.HasOne("proyectoCeleste.API.Models.Mascota", "Mascota")
                         .WithMany("Atenciones")
-                        .HasForeignKey("MascotaId");
+                        .HasForeignKey("MascotaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("proyectoCeleste.API.Models.TipoAtencion", "TipoAtencion")
                         .WithMany()

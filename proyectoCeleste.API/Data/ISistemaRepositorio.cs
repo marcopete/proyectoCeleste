@@ -15,5 +15,11 @@ namespace proyectoCeleste.API.Data
          Task<Mascota> ObtenerMascota(int id);
          Task<IEnumerable<Atencion>> ObtenerAtenciones();
          Task<Atencion> ObtenerAtencion(int id);
+         Task<IEnumerable<Region>> ObtenerRegiones();
+         Task<IEnumerable<TipoAtencion>> ObtenerTipoAtenciones();
+        Task <IEnumerable<Ciudad>> ObtenerCiudades();
+        Task<IEnumerable<TipoMascota>> ObtenerTipoMascotas();
+        Task<IEnumerable<Log>> ObtenerLogs();
+        Task<IEnumerable<Genero>> ObtenerGeneros();
     }
 }

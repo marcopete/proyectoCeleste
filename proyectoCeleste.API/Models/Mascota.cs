@@ -15,7 +15,6 @@ namespace proyectoCeleste.API.Models
         public int UsuarioId { get; set; }
         public TipoMascota TipoMascota { get; set; }
         public int TipoMascotaId { get; set; }
+        public int GeneroId { get; set; }
     }
 }
-
-// pendiente genero
